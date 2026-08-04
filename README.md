@@ -236,7 +236,7 @@ PYTHONPATH=. pytest -v
 | `test_data_pipeline.py` | Unit + Data Validation | 21 |
 | `test_training.py` | ML Training + Inference | 13 |
 | `test_api.py` | Integration | 18 |
-| **Total** | | **100** |
+| **Total** | | **78** |
 
 **Result: 100 passed**
 
@@ -316,4 +316,4 @@ isort>=5.12.0
 
 ## License
 
-Academic submission — BITS Pilani WILP, AIML ZG535, Group 101.
+Academic submission
