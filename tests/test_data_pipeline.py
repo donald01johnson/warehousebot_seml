@@ -4,7 +4,7 @@ Unit and Integration tests for the full data pipeline.
 Covers F1-F5 (collect, clean, engineer, label, split).
 
 Assignment II Requirements 6 & 8 - Unit Tests + Data Quality Metrics
-Assignment II - AIML ZG535, BITS Pilani WILP | Group 101
+Assignment II - AIMLCZG546, BITS Pilani WILP | Group 101
 """
 
 from dataclasses import asdict

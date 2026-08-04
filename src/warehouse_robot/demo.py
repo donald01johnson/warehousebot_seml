@@ -10,7 +10,7 @@ Demonstrates:
     6. Data quality metrics
     7. ML-based path planning
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 
@@ -36,7 +36,7 @@ def main_demo():
 
     print("=" * 65)
     print("  WAREHOUSE ROBOT NAVIGATION SYSTEM - ASSIGNMENT II DEMO")
-    print("  AIML ZG535 | BITS Pilani WILP | Group 101")
+    print("  AIMLCZG546 | BITS Pilani WILP | Group 101")
     print("=" * 65)
 
     # Step 1: Create Grid

@@ -3,7 +3,7 @@ ML model training and inference tests.
 
 Assignment II Requirement 7 - ML Training & Inference Tests
 Assignment II Requirement 8 - Model Quality Metrics (MAE, RMSE, R2)
-Assignment II - AIML ZG535, BITS Pilani WILP | Group 101
+Assignment II - AIMLCZG546, BITS Pilani WILP | Group 101
 """
 
 import pytest

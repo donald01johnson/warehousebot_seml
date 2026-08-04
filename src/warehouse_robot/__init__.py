@@ -4,7 +4,7 @@ Warehouse Robot Navigation System — Assignment II Production Package.
 A production-grade refactoring of the Assignment I autonomous warehouse
 robot navigation system.
 
-Course      : AIML ZG535 — Edge AI Systems
+Course      : AIMLCZG546
 Institution : BITS Pilani WILP
 Group       : 101
 Members     : Donald Johnson A, Sanchi Jain,
@@ -31,7 +31,7 @@ __author__ = (
     "Sanchi Jain, " "Brijesh Pandey,"
     "Gochhayat Avimanyu"
 )
-__course__ = "AIML ZG535 — Edge AI Systems, BITS Pilani WILP"
+__course__ = "AIMLCZG546, BITS Pilani WILP"
 
 __all__ = [
     "EpisodeLog",

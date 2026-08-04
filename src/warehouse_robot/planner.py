@@ -17,7 +17,7 @@ PRODUCTION (this module) version characteristics:
   - Comprehensive docstrings
   - Importable, testable, reusable module
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 

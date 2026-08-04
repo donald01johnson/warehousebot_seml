@@ -7,7 +7,7 @@ Endpoints:
     POST /score-path    — score a user-supplied path
     POST /simulate      — run a full navigation episode and return metrics
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 
@@ -29,7 +29,7 @@ app = FastAPI(
     description=(
         "REST API for autonomous warehouse robot path planning and"
         "simulation. "
-        "Assignment II — AIML ZG535, BITS Pilani WILP, Group 101."
+        "Assignment II — AIMLCZG546, BITS Pilani WILP, Group 101."
     ),
     version="2.0.0",
 )

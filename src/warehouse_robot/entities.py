@@ -1,7 +1,7 @@
 """
 Core data entities for the Warehouse Robot Navigation System.
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 

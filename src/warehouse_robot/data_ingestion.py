@@ -4,7 +4,7 @@ Data ingestion pipeline — F1 (collection) and F2 (cleaning).
 Implements the first two filters of the Pipes-and-Filters architecture
 carried forward from Assignment I.
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 

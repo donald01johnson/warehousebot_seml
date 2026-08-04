@@ -1,7 +1,7 @@
 """
 Warehouse grid environment for robot navigation.
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 

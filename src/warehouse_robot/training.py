@@ -6,7 +6,7 @@ Implements:
     ML  – RandomForest / LinearRegression training and evaluation
           (Assignment II Requirements 7 and 8)
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 

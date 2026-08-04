@@ -1,7 +1,7 @@
 """
 Pytest configuration and shared fixtures for Assignment II test suite.
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 101
 """
 
