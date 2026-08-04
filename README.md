@@ -1,21 +1,5 @@
 # Warehouse Robot Navigation System — Assignment II
 
-> **Course:** AIML ZG535 — Edge AI Systems  
-> **Institution:** BITS Pilani WILP  
-> **Group:** 101  
-> **Submission Deadline:** 15 August 2026, 23:00
-
----
-
-## Group Members
-
-| No. | Name | Primary Contribution |
-|-----|------|---------------------|
-| 1 | Donald Johnson A | System architecture, modular package, API, testing |
-| 2 | Sanchi Jain | Feature engineering, data pipeline, quality metrics |
-| 3 | Brijesh Pandey | ML training, inference, model evaluation |
-| 4 | Gochhayat Avimanyu | Logging, error handling, documentation, demo |
-
 ---
 
 ## Overview
