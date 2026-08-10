@@ -7,8 +7,7 @@ robot navigation system.
 Course      : AIMLCZG546
 Institution : BITS Pilani WILP
 Group       : 101
-Members     : Donald Johnson A, Sanchi Jain,
-              Brijesh Pandey, Gochhayat Avimanyu
+Members     : Donald Johnson A
 """
 
 from .config import (
@@ -27,9 +26,7 @@ from .simulator import RobotSimulator
 
 __version__ = "2.0.0"
 __author__ = (
-    "Group 101 — Donald Johnson A,"
-    "Sanchi Jain, " "Brijesh Pandey,"
-    "Gochhayat Avimanyu"
+    "Group 101 — Donald Johnson A"
 )
 __course__ = "AIMLCZG546, BITS Pilani WILP"
 

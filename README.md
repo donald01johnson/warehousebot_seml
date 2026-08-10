@@ -238,8 +238,6 @@ PYTHONPATH=. pytest -v
 | `test_api.py` | Integration | 18 |
 | **Total** | | **78** |
 
-**Result: 100 passed**
-
 ---
 
 ## Code Quality
