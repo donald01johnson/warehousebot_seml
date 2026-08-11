@@ -57,7 +57,7 @@ PYTHONPATH=. flake8 src tests
 ```
 whousebot_seml/
 │
-├── Group_101.ipynb              # Main assignment notebook (submission)
+├── Group_212.ipynb              # Main assignment notebook (submission)
 ├── requirements.txt             # All Python dependencies
 ├── pyproject.toml               # black, isort, flake8, pytest config
 ├── .flake8                      # flake8 configuration (max-line-length=88)
@@ -93,7 +93,7 @@ whousebot_seml/
 ├── artifacts/                   # Model outputs, saved logs
 ├── logs/                        # Runtime log files
 └── backup_notebook_code/        # Original Assignment I .py extract
-    └── Group_101.py
+    └── Group_212.py
 ```
 
 ---
@@ -286,7 +286,7 @@ git push origin main
 ### Commit History
 
 ```
-Final submission - Group_101 Assignment II complete
+Final submission - Group_212 Assignment II complete
 Phase 2 - All 100 tests passing, fix numpy bool in is_free()
 Initial Assignment II project setup
 ```

@@ -6,7 +6,7 @@ robot navigation system.
 
 Course      : AIMLCZG546
 Institution : BITS Pilani WILP
-Group       : 101
+Group       : 212
 Members     : Donald Johnson A
 """
 
@@ -26,7 +26,7 @@ from .simulator import RobotSimulator
 
 __version__ = "2.0.0"
 __author__ = (
-    "Group 101 — Donald Johnson A"
+    "Group 212 — Donald Johnson A"
 )
 __course__ = "AIMLCZG546, BITS Pilani WILP"
 

@@ -2,7 +2,7 @@
 Integration tests for the FastAPI REST endpoints.
 
 Assignment II Requirement 6 - Integration Tests
-Assignment II - AIMLCZG546, BITS Pilani WILP | Group 101
+Assignment II - AIMLCZG546, BITS Pilani WILP | Group 212
 """
 
 from fastapi.testclient import TestClient

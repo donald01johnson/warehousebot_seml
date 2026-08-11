@@ -2,7 +2,7 @@
 Robot simulator for warehouse navigation.
 
 Assignment II - AIMLCZG546, BITS Pilani WILP
-Group 101
+Group 212
 """
 
 from typing import Tuple

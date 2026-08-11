@@ -2,7 +2,7 @@
 Unit tests for WarehouseGrid and neighbors().
 
 Assignment II Requirement 6 - Unit Tests
-Assignment II - AIMLCZG546, BITS Pilani WILP | Group 101
+Assignment II - AIMLCZG546, BITS Pilani WILP | Group 212
 """
 
 import pytest

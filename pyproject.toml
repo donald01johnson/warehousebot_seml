@@ -7,7 +7,7 @@ name = "warehouse-robot-navigation"
 version = "2.0.0"
 description = "Assignment II: Production-grade warehouse robot navigation system"
 authors = [
-    { name = "Group 101 - Donald Johnson A, Sanchi Jain, Brijesh Pandey, Gochhayat Avimanyu" }
+    { name = "Group 212 - Donald Johnson A" }
 ]
 readme = "README.md"
 requires-python = ">=3.10"

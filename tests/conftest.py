@@ -2,7 +2,7 @@
 Pytest configuration and shared fixtures for Assignment II test suite.
 
 Assignment II - AIMLCZG546, BITS Pilani WILP
-Group 101
+Group 212
 """
 
 import random

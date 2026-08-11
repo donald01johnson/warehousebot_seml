@@ -8,7 +8,7 @@ Endpoints:
     POST /simulate      — run a full navigation episode and return metrics
 
 Assignment II - AIMLCZG546, BITS Pilani WILP
-Group 101
+Group 212
 """
 
 from typing import List, Optional
@@ -29,7 +29,7 @@ app = FastAPI(
     description=(
         "REST API for autonomous warehouse robot path planning and"
         "simulation. "
-        "Assignment II — AIMLCZG546, BITS Pilani WILP, Group 101."
+        "Assignment II — AIMLCZG546, BITS Pilani WILP, Group 212."
     ),
     version="2.0.0",
 )

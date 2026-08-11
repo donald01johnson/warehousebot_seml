@@ -11,7 +11,7 @@ Demonstrates:
     7. ML-based path planning
 
 Assignment II - AIMLCZG546, BITS Pilani WILP
-Group 101
+Group 212
 """
 
 from .config import (
@@ -36,7 +36,7 @@ def main_demo():
 
     print("=" * 65)
     print("  WAREHOUSE ROBOT NAVIGATION SYSTEM - ASSIGNMENT II DEMO")
-    print("  AIMLCZG546 | BITS Pilani WILP | Group 101")
+    print("  AIMLCZG546 | BITS Pilani WILP | Group 212")
     print("=" * 65)
 
     # Step 1: Create Grid

@@ -2,7 +2,7 @@
 ML-based navigation model — path scoring and multi-candidate planning.
 
 Assignment II - AIMLCZG546, BITS Pilani WILP
-Group 101
+Group 212
 """
 
 from typing import List

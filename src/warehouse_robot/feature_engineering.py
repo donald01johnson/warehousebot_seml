@@ -5,7 +5,7 @@ Implements the middle two filters of the Pipes-and-Filters architecture
 carried forward from Assignment I.
 
 Assignment II - AIMLCZG546, BITS Pilani WILP
-Group 101
+Group 212
 """
 
 from typing import Dict, List

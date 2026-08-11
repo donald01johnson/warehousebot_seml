@@ -2,7 +2,7 @@
 Centralized logging configuration for the Warehouse Robot Navigation System.
 
 Assignment II - AIMLCZG546, BITS Pilani WILP
-Group 101
+Group 212
 """
 
 import logging
