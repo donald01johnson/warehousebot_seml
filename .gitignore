@@ -16,3 +16,6 @@ logs/
 .vscode/
 .idea/
 Group212_Assignment2_Files/
+
+# Zip files
+*.zip
