@@ -123,7 +123,7 @@ def main_demo():
     goal = (DEFAULT_ROWS - 1, DEFAULT_COLS - 1)
 
     if grid.is_free(start) and grid.is_free(goal):
-        best_path = plan_path_with_model(grid, start, goal)
+        best_path = plan_path_with_model(grid, start, goal, model=model)
         print(f"    Route   : {start} -> {goal}")
         print(f"    Length  : {len(best_path)} steps")
         suffix = "..." if len(best_path) > 6 else ""

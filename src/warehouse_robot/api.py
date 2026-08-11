@@ -12,7 +12,7 @@ episodes. The /predict-path endpoint scores candidate paths using
 model.predict() on engineered features rather than a hardcoded
 heuristic -- directly addressing Assignment I feedback.
 
-Assignment II - AIML ZG535, BITS Pilani WILP
+Assignment II - AIMLCZG546, BITS Pilani WILP
 Group 212
 """
 
@@ -105,7 +105,7 @@ app = FastAPI(
         "REST API for autonomous warehouse robot path planning "
         "and simulation. Uses a trained RandomForest model for "
         "ML-based path scoring. "
-        "Assignment II — AIML ZG535, BITS Pilani WILP, Group 212."
+        "Assignment II — AIMLCZG546, BITS Pilani WILP, Group 212."
     ),
     version="2.0.0",
 )
