@@ -2,15 +2,15 @@
 FastAPI REST API for the Warehouse Robot Navigation System.
 
 Endpoints:
-    GET  /health        — service health check
-    POST /predict-path  — plan optimal path using trained ML model
-    POST /score-path    — score a user-supplied path
-    POST /simulate      — run a full navigation episode and return metrics
+    GET  /health        -- service health check
+    POST /predict-path  -- plan optimal path using trained ML model
+    POST /score-path    -- score a user-supplied path
+    POST /simulate      -- run a full navigation episode
 
 The API trains a RandomForestRegressor at startup using simulated
 episodes. The /predict-path endpoint scores candidate paths using
 model.predict() on engineered features rather than a hardcoded
-heuristic — directly addressing Assignment I feedback.
+heuristic -- directly addressing Assignment I feedback.
 
 Assignment II - AIML ZG535, BITS Pilani WILP
 Group 212
@@ -39,23 +39,24 @@ setup_logging()
 logger = get_logger("api")
 
 
-# ─────────────────────── Startup: Train model ─────────────────────────────────
+# ── Startup: Train model ───────────────────────────────────────────
 
 
 def _train_startup_model():
     """
-    Train a RandomForestRegressor at API startup for use in /predict-path.
+    Train a RandomForestRegressor at API startup.
 
     Simulates DEFAULT_NUM_EPISODES navigation episodes, runs the full
-    data pipeline (F1-F5), trains a RandomForest regression model, and
-    returns the fitted model.
+    data pipeline (F1-F5), trains a RandomForest regression model,
+    and returns the fitted model.
 
     Returns:
         Fitted RandomForestRegressor, or None if training fails.
     """
     try:
         logger.info(
-            "API startup: training RandomForest model on %d episodes...",
+            "API startup: training RandomForest model "
+            "on %d episodes...",
             DEFAULT_NUM_EPISODES,
         )
         RAW_LOGS.clear()
@@ -95,7 +96,7 @@ def _train_startup_model():
 _startup_model = _train_startup_model()
 
 
-# ───────────────────────────── FastAPI App ────────────────────────────────────
+# ── FastAPI App ────────────────────────────────────────────────────
 
 
 app = FastAPI(
@@ -110,7 +111,7 @@ app = FastAPI(
 )
 
 
-# ─────────────────────── Request / Response models ────────────────────────────
+# ── Request / Response models ──────────────────────────────────────
 
 
 class PathRequest(BaseModel):
@@ -143,7 +144,9 @@ class PathRequest(BaseModel):
 class ScoreRequest(BaseModel):
     rows: int = Field(default=10, ge=2, le=50)
     cols: int = Field(default=10, ge=2, le=50)
-    obstacle_probability: float = Field(default=0.2, ge=0.0, lt=1.0)
+    obstacle_probability: float = Field(
+        default=0.2, ge=0.0, lt=1.0
+    )
     path: List[List[int]] = Field(
         ..., description="List of [row, col] steps"
     )
@@ -170,7 +173,7 @@ class SimulateResponse(BaseModel):
     message: str
 
 
-# ──────────────────────────────── Endpoints ───────────────────────────────────
+# ── Endpoints ──────────────────────────────────────────────────────
 
 
 @app.get("/health", tags=["Health"])
@@ -205,16 +208,18 @@ def predict_path(request: PathRequest):
     the trained RandomForestRegressor (model.predict() on engineered
     features), and returns the best-scoring path.
 
-    Falls back to heuristic scoring if the startup model is unavailable.
+    Falls back to heuristic scoring if startup model is unavailable.
 
     Returns:
-        200 — path found successfully.
-        400 — start or goal position is invalid.
-        404 — no feasible path exists.
-        500 — internal server error.
+        200 -- path found successfully.
+        400 -- start or goal position is invalid.
+        404 -- no feasible path exists.
+        500 -- internal server error.
     """
     logger.info(
-        "POST /predict-path: start=%s, goal=%s", request.start, request.goal
+        "POST /predict-path: start=%s, goal=%s",
+        request.start,
+        request.goal,
     )
 
     try:
@@ -251,7 +256,7 @@ def predict_path(request: PathRequest):
                 ),
             )
 
-        # Use trained ML model for scoring (or heuristic if unavailable)
+        # Use trained ML model for scoring (heuristic if unavailable)
         path = plan_path_with_model(
             grid,
             start,
@@ -302,10 +307,13 @@ def predict_path(request: PathRequest):
         raise
     except Exception as exc:
         logger.error(
-            "/predict-path internal error: %s", str(exc), exc_info=True
+            "/predict-path internal error: %s",
+            str(exc),
+            exc_info=True,
         )
         raise HTTPException(
-            status_code=500, detail=f"Internal server error: {exc}"
+            status_code=500,
+            detail=f"Internal server error: {exc}",
         )
 
 
@@ -315,8 +323,8 @@ def score_given_path(request: ScoreRequest):
     Score a user-provided path on a freshly generated warehouse grid.
 
     Returns:
-        200 — score computed successfully.
-        500 — internal server error.
+        200 -- score computed successfully.
+        500 -- internal server error.
     """
     logger.info(
         "POST /score-path: path_length=%d", len(request.path)
@@ -341,10 +349,13 @@ def score_given_path(request: ScoreRequest):
 
     except Exception as exc:
         logger.error(
-            "/score-path internal error: %s", str(exc), exc_info=True
+            "/score-path internal error: %s",
+            str(exc),
+            exc_info=True,
         )
         raise HTTPException(
-            status_code=500, detail=f"Internal server error: {exc}"
+            status_code=500,
+            detail=f"Internal server error: {exc}",
         )
 
 
@@ -359,12 +370,14 @@ def simulate_task(request: PathRequest):
     and obstacle density.
 
     Returns:
-        200 — simulation completed successfully.
-        400 — start or goal position is invalid.
-        500 — internal server error.
+        200 -- simulation completed successfully.
+        400 -- start or goal position is invalid.
+        500 -- internal server error.
     """
     logger.info(
-        "POST /simulate: start=%s, goal=%s", request.start, request.goal
+        "POST /simulate: start=%s, goal=%s",
+        request.start,
+        request.goal,
     )
 
     try:
@@ -413,8 +426,11 @@ def simulate_task(request: PathRequest):
         raise
     except Exception as exc:
         logger.error(
-            "/simulate internal error: %s", str(exc), exc_info=True
+            "/simulate internal error: %s",
+            str(exc),
+            exc_info=True,
         )
         raise HTTPException(
-            status_code=500, detail=f"Internal server error: {exc}"
+            status_code=500,
+            detail=f"Internal server error: {exc}",
         )

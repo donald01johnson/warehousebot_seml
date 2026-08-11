@@ -5,7 +5,7 @@ Assignment II - AIML ZG535, BITS Pilani WILP
 Group 212
 """
 
-from typing import List, Optional
+from typing import List
 
 import numpy as np
 
@@ -99,7 +99,7 @@ def score_path_with_model(
         grid             : The warehouse grid environment.
         model            : Fitted scikit-learn model (RandomForestRegressor).
                            If None, falls back to heuristic scoring.
-        shortest_path_len: BFS optimal path length used for optimality ratio.
+        shortest_path_len: BFS optimal path length for optimality ratio.
 
     Returns:
         Predicted travel time (float) from the ML model.
@@ -128,7 +128,7 @@ def score_path_with_model(
             0.0,                    # collisions unknown pre-execution
             0.0,                    # replans unknown pre-execution
             float(optimality),
-            float(TIME_PER_STEP),   # time_per_step constant from config
+            float(TIME_PER_STEP),   # time_per_step from config
         ]])
 
         prediction = float(model.predict(features)[0])
@@ -167,7 +167,7 @@ def plan_path_with_model(
     Strategy:
         1. Generate BFS optimal path as a guaranteed baseline.
         2. Generate num_candidates greedy-random paths for diversity.
-        3. Score all paths that reach the goal using ML model or heuristic.
+        3. Score all paths that reach the goal using ML or heuristic.
         4. Return the lowest-scoring (best predicted travel time) path.
 
     Args:
@@ -199,8 +199,7 @@ def plan_path_with_model(
 
     scoring_mode = "ML model" if model is not None else "heuristic"
     logger.info(
-        "plan_path_with_model: %s -> %s "
-        "(candidates=%d, scoring=%s)",
+        "plan_path_with_model: %s -> %s (candidates=%d, scoring=%s)",
         start,
         goal,
         num_candidates,
@@ -248,7 +247,7 @@ def plan_path_with_model(
     best_score, best_path = scored[0]
 
     logger.info(
-        "plan_path_with_model: best path selected | "
+        "plan_path_with_model: best path | "
         "score=%.4f | len=%d | scoring=%s",
         best_score,
         len(best_path),
